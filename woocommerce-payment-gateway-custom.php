@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WooCommerce custom Gateway
+Plugin Name: WooCommerce Custom Gateway
 Plugin URI: https://github.com/FabMediaIO/woocommerce-custom-payment-gateway
 Description: Extends WooCommerce with an custom gateway.
 Version: 1.0.0
@@ -32,9 +32,9 @@ function woocommerce_gateway_name_init() {
 		public function __construct() {
   
 	    $this->id                 = 'custom_gateway';
-	    $this->icon               = apply_filters('woocommerce_custom_icon', plugins_url('../assets/icon.png', __FILE__ ));
+	    $this->icon               = apply_filters('woocommerce_custom_icon', plugins_url('/assets/icon.png', __FILE__ ));
 	    $this->has_fields         = false;
-	    $this->method_title       = __( 'custom', 'wc-gateway-custom' );
+	    $this->method_title       = __( 'Custom', 'wc-gateway-custom' );
 	    $this->method_description = __( 'Allows custom payments.', 'wc-gateway-custom' );
 	    
 	    $this->init_form_fields();
@@ -60,7 +60,7 @@ function woocommerce_gateway_name_init() {
 	      'enabled' => array(
 	        'title'   => __( 'Enable/Disable', 'wc-gateway-custom' ),
 	        'type'    => 'checkbox',
-	        'label'   => __( 'Enable custom Payment', 'wc-gateway-custom' ),
+	        'label'   => __( 'Enable Custom Payment', 'wc-gateway-custom' ),
 	        'default' => 'yes'
 	      ),
 	      
@@ -68,7 +68,7 @@ function woocommerce_gateway_name_init() {
 	        'title'       => __( 'Title', 'wc-gateway-custom' ),
 	        'type'        => 'text',
 	        'description' => __( 'This controls the title for the payment method the customer sees during checkout.', 'wc-gateway-custom' ),
-	        'default'     => __( 'custom Payment', 'wc-gateway-custom' ),
+	        'default'     => __( 'Custom Payment', 'wc-gateway-custom' ),
 	        'desc_tip'    => true,
 	      ),
 	      
